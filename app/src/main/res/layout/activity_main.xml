@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:padding="0dp"
+    tools:context=".ui.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="220dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageButton
+                    android:id="@+id/arcadeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:contentDescription="tile"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tile" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/minesweeper"
+                    android:gravity="center"
+                    android:text="Arcade"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="220dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageButton
+                    android:id="@+id/roomBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:contentDescription="tile"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tile" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/minesweeper"
+                    android:gravity="center"
+                    android:text="Room"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="220dp"
+                android:layout_height="80dp">
+
+                <ImageButton
+                    android:id="@+id/statsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:contentDescription="tile"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tile" />
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/minesweeper"
+                    android:gravity="center"
+                    android:text="Stats"
+                    android:textColor="@android:color/white"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="16sp" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/levelsOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="480dp"
+            android:background="@drawable/tile"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            android:padding="50dp"
+            android:layout_gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/closeBtn1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@android:drawable/ic_delete"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Close"
+                android:scaleType="fitCenter"
+                app:tint="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageButton
+                        android:id="@+id/easyBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:contentDescription="tile"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/tile" />
+
+                    <TextView
+                        android:id="@+id/easy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/minesweeper"
+                        android:gravity="center"
+                        android:text="Easy"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageButton
+                        android:id="@+id/mediumBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:contentDescription="tile"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/tile" />
+
+                    <TextView
+                        android:id="@+id/medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/minesweeper"
+                        android:gravity="center"
+                        android:text="Medium"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="80dp">
+
+                    <ImageButton
+                        android:id="@+id/harBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:contentDescription="tile"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/tile" />
+
+                    <TextView
+                        android:id="@+id/hard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/minesweeper"
+                        android:gravity="center"
+                        android:text="Hard"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/roomsOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:background="@drawable/tile"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            android:padding="50dp">
+
+            <ImageButton
+                android:id="@+id/closeBtn2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@android:drawable/ic_delete"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Settings"
+                android:scaleType="fitCenter"
+                app:tint="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="230dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageButton
+                        android:id="@+id/findBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:contentDescription="tile"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/tile" />
+
+                    <TextView
+                        android:id="@+id/find"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/minesweeper"
+                        android:gravity="center"
+                        android:text="Find Room"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="230dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageButton
+                        android:id="@+id/createBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:contentDescription="tile"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/tile" />
+
+                    <TextView
+                        android:id="@+id/create"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/minesweeper"
+                        android:gravity="center"
+                        android:text="Create Room"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+                </FrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
